@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  mysql:
+    image: mysql
+    ports:
+      - 3307:3306
+    environment:
+      # be careful MYSQL_ROOT_PASSWORD: "" will parse
+      # and set the password to two double quotes :grumpycat:
+      - MYSQL_ROOT_PASSWORD=local
+      # database contains invalid datetimes
+    command: ["--sql-mode=no_engine_substitution"]
+    volumes:
+      - mysql_data:/var/lib/mysql
+volumes:
+  mysql_data:
