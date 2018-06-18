@@ -6,7 +6,7 @@ zero datetimes.
 Clone this repository and `cd` into the directory then run:
 
 ```
-docker-composer up -d
+docker-compose up -d
 ```
 
 ## Password
