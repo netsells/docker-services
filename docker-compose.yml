@@ -17,5 +17,10 @@ services:
     ports:
     - 1025:1025
     - 1080:1080
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
 volumes:
   mysql_data:
