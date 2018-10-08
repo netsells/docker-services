@@ -22,7 +22,7 @@ services:
     restart: always
     ports:
       - 8080:8080
-  elastic_search:
+  elasticsearch:
     image: elasticsearch:6.4.0
     environment:
       - discovery.type=single-node
