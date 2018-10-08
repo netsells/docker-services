@@ -22,5 +22,12 @@ services:
     restart: always
     ports:
       - 8080:8080
+  elastic_search:
+    image: elasticsearch:6.4.0
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+      - 9300:9300
 volumes:
   mysql_data:
